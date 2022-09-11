@@ -1,0 +1,329 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+@font-face {font-family:font1; src:url("font1.woff");}
+body{
+	background:#EFEFEF;
+	font-family: font1, Arial, Helvetica, sans-serif; 
+	min-width:1000px; 
+	font-size:17px; 
+}
+a { outline:none; color: #0066CC; text-decoration:underline; }
+a:hover { color:#000; }
+button { outline:none; }
+input { outline:none; }
+h1,h2,h3,h4{ font-weight:bold; }
+hr { border:none; border-top:1px solid #BBB; margin:40px 0px 40px 0px; }
+p { line-height:1.5em; }
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+.one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+.shadow1 {
+	margin: 40px;
+	background-color: rgb(68,68,68); /* Needed for IEs */
+
+	-moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+.shadow2 {
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+.radius {
+	border-radius: 90px/30px;
+}
+.radius1 {
+	border-radius: 10px/30px;
+}
+.radius2 {
+	border-radius: 30px/10px;
+}
+button{ height: 30px; width: 70px; margin-left: 15px; border-radius: 2px; background-color: #42B8DD; border-right: none;  border-bottom: 2px solid #2297BD; border-top:none; border-left: none; font-weight: bold; cursor:pointer; color: #FFF;}
+button:active{ border: none;  color:#2297BD;}
+header{
+	background:url(bgstrip.png) repeat-x; height:216px;
+}
+header > #headerborder{ float:left; width:196px; height:196px; margin:15px 0px 0px 24px; background:url(mastsealborder.png) no-repeat;}
+header > #headerborder > #mastseal{float: left; width:180px; height:180px; margin:8px 0px 0px 8px; cursor:pointer; }
+header > #headerborder > #mastseal > img{position:absolute; width:180px; height:180px; backface-visibility: hidden; transition: transform .7s linear 0s;}
+header > #headerborder > #mastseal > #sealfront{transform: perspective( 600px ) rotateY( 0deg );}
+header > #headerborder > #mastseal > #sealback{transform: perspective( 600px ) rotateY( 180deg );}
+header > #headerborder > #mastseal:hover > #sealfront{transform: perspective( 600px ) rotateY( -180deg );}
+header > #headerborder > #mastseal:hover > #sealback{transform: perspective( 600px ) rotateY( 0deg );}
+header > #loginMenu {float: right; margin: 70px 300px 0 0; height:30px; width: 650px; padding: 25px 25px;}
+header > #loginMenu > span{ font-weight: bolder; color: #333;}
+header > #loginMenu > input{height: 26px; font-weight: bold; width: 190px; background-color: #B9B9B9; box-shadow: inset .5px .5px 1px 1px #666; border: none; color: #FFF; padding: 2px 5px;}
+header > #loginMenu > input:focus{background-color: #FFF; color: #42B8DD;}
+header > #loginMenu > a{font-weight: bolder; color: #333; border-radius: 2px; height: 15px; padding: 1px; font-size: 15px; text-decoration: none; cursor: pointer; margin-left: -57px;}
+header > #loginMenu > a:hover{ color: #fff; background: #333;}
+nav{ height:650px; width: 1600px;  margin: 20px auto; }
+nav > #leftLogo{
+	float: left;
+	height: 450px;
+	width: 352px;
+	margin-top: 100px;
+}
+nav > .public{
+	background: url(public.png) no-repeat;
+}
+nav > .private{
+	background: url(private.png) no-repeat;
+}
+nav > .alert{
+	background: url(alert.gif) no-repeat;
+}
+nav > #content{
+	float: left;
+	width: 1244px;
+}
+nav > #content > #heading{
+	float: left;
+	width: 1242px;
+	height: 50px;
+}
+nav > #content > #heading > h1{text-align:center; color:#333; font-weight:100; font-size:41px; word-spacing:10px; }
+nav > #content > #menu {
+	float: left;
+	width: 1000px;
+	height: 430px;
+	margin: 60px 120px;
+	background-color: #fff;
+	z-index: 0;
+}
+nav > #content > #menu > #leftMenu{
+	float: left;
+	height: 400px;
+	width: 400px;
+	margin: 15px 30px 15px 80px;
+}
+nav > #content > #menu > #leftMenu > #counter {
+	float: left;
+	height: 180px;
+	width: 380px;
+	margin: 10px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 50px;
+
+}
+.inactive {
+	background: #EFEFEF;
+	color: #666;
+
+}
+.active {
+	background: #42B8DD;
+	color: #FFF;
+
+}
+nav > #content > #menu > #leftMenu > #counter > #ctrNum{
+	float: left;
+	font-size: 150px;
+	height: 180px;
+	width: 180px;
+}
+nav > #content > #menu > #leftMenu > #counter > #ctrP{
+	float: left;
+	font-size: 50px;
+	height: 80px;
+	width: 180px;
+	padding: 50px 0;
+}
+nav > #content > #menu > #leftMenu > #door {
+	float: left;
+	height: 190px;
+	width: 400px;
+	margin-top: 10px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 25px;
+	color: #333;
+}
+nav > #content > #menu > #leftMenu > #door > #door1 {
+	float: left;
+	height: 180px;
+	width: 180px;
+	margin: 4px 8px;
+	cursor: pointer;
+	border-right: 2px dashed #42B8DD;
+	border-top: 2px dashed #42B8DD;
+	border-left: 2px dashed #42B8DD;
+	border-radius: 90px/30px;
+}
+nav > #content > #menu > #leftMenu > #door > #door2 {
+	float: left;
+	height: 180px;
+	width: 180px;
+	margin: 4px 8px;
+	cursor: pointer;
+	border-left: 2px dashed #42B8DD;
+	border-top: 2px dashed #42B8DD;
+	border-right: 2px dashed #42B8DD;
+	border-radius: 90px/30px;
+}
+nav > #content > #menu > #rightMenu {
+	float: left;
+	height: 400px;
+	width: 400px;
+	margin: 15px;
+	background: #EFEFEF;
+	z-index: 1;
+}
+nav > #content > #menu > #rightMenu > #alarmBox #alarm{
+	float: left;
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	margin: 164px;
+	z-index: 2;
+}
+nav > #content > #menu > #rightMenu > #alarmBox .alarmOff{
+	float: left;
+	background:url(alarmOff.png) no-repeat;
+	background-position: center;
+}
+nav > #content > #menu > #rightMenu > #alarmBox .alarmOn{
+	float: left;
+	background:url(alarmOn.png) no-repeat;
+	background-position: center;
+}
+nav > #content > #menu > #rightMenu > #alarmBox .alarmActive{
+	float: left;
+	background:url(alarmActive.gif) no-repeat;
+	background-position: center;
+}
+nav > #content > #menu > #rightMenu > #bulb1 .devices {
+	float: left;
+	height: 180px;
+	width: 180px;
+	margin: 10px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+    background-position: 43px 15px; 
+    border-radius: 270px/100px;
+}
+nav > #content > #menu > #rightMenu > #bulb2 .devices {
+	float: left;
+	height: 180px;
+	width: 180px;
+	margin: 10px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+    background-position: 43px 15px; 
+    border-radius: 270px/100px;
+}
+nav > #content > #menu > #rightMenu > #bulb3 .devices {
+	float: left;
+	height: 180px;
+	width: 180px;
+	margin: 10px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+    background-position: 43px 15px; 
+    border-radius: 270px/100px;
+}
+nav > #content > #menu > #rightMenu > #bulb4 .devices {
+	float: left;
+	height: 180px;
+	width: 180px;
+	margin: 10px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+    background-position: 43px 15px; 
+    border-radius: 270px/100px;
+}
+nav > #content > #menu > #rightMenu > #bulb1 .devicesOff{
+	background-color: #CCC;
+	background-image: url('bulb_off.png');
+}
+nav > #content > #menu > #rightMenu > #bulb2 .devicesOff{
+	background-color: #CCC;
+	background-image: url('bulb_off.png');
+}
+nav > #content > #menu > #rightMenu > #bulb3 .devicesOff{
+	background-color: #CCC;
+	background-image: url('bulb_off.png');
+}
+nav > #content > #menu > #rightMenu > #bulb4 .devicesOff{
+	background-color: #CCC;
+	background-image: url('bulb_off.png');
+}
+nav > #content > #menu > #rightMenu > #bulb1 .devicesOnR{
+	background-color: #FFF5F4;
+	background-image: url('r_bulb_on.png')
+}
+nav > #content > #menu > #rightMenu > #bulb2 .devicesOnG{
+	background-color: #ECFFF1;
+	background-image: url('g_bulb_on.png');
+	
+}
+nav > #content > #menu > #rightMenu > #bulb3 .devicesOnB{
+	background-color: #ECF1FF;
+	background-image: url('b_bulb_on.png');
+	
+}
+nav > #content > #menu > #rightMenu > #bulb4 .devicesOnY{
+	background-color: #FFFDEC;
+	background-image: url('y_bulb_on.png');
+	
+}
+#sideMenu {
+	height: 180px;
+	width: 15px;
+	background-color: #42B8DD;
+	border: 2px solid #2297BD;
+	border-right: none;
+	border-radius: 30px 0 0 30px;
+	padding: 20px;
+	font-size: 25px;
+	color: #fff;
+	top: 440px;
+	font-weight: bold;
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	font-style: italic;
+}
+#sideMenuContent {
+	height: 500px;
+	width: 200px;
+	background-color: #fff;
+	border: 2px solid #2297BD;
+	border-right: none;
+	border-radius: 30px 0 0 30px;
+	padding: 20px;
+	font-size: 25px;
+	text-align: center;
+	color: #2297BD;
+	top: 280px;
+	font-weight: bold;
+	position: absolute;
+	cursor: pointer;
+	right: 0px;
+	visibility: hidden;
+	transition: visible 0.3s linear 0s;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#sideMenuContent > span {
+	float: left;
+	font-size: 15px;
+	font-style: italic;
+	text-align: center;
+}
+footer { clear:both; background:#CCC; height:150px; border-top:1px solid #999; line-height:1.5em; text-align:center; color:#333; cursor: pointer; }
+footer > #foot_rule{ background:url(footer_rule.png) center no-repeat; height:65px; position:relative; top:-3px; opacity:1; margin-bottom:10px; }
